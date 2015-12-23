@@ -1,0 +1,26 @@
+{
+  "name": "json_csv",
+  "version": "0.1.0",
+  "description": "convert many JSON files into CSV format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patci/json_csv.git"
+  },
+  "keywords": [
+    "JSON",
+    "CSV"
+  ],
+  "author": "rpatci@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patci/json_csv/issues"
+  },
+  "homepage": "https://github.com/patci/json_csv#readme",
+  "dependencies": {
+    "json2csv": "^3.0.1"
+  }
+}
