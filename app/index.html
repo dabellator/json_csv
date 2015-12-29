@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -8,48 +9,8 @@
 <body>
 <input style="color:blue;" id="jsonFolder" type="file" multiple nwdirectory/>
 <input style="color:green;" id="csvFolder" type="file" nwsaveas nwdirectory />
-
-<script type="text/javascript">
-  var fs = require('fs');
-  var gui = require('nw.gui');
-  var json2csv = require('json2csv');
-  var converter = require('json-2-csv');
-
-  var $jsonFolder = $("#jsonFolder");
-  console.log($jsonFolder);
-
-  var jsonFiles;
-  var jsonData = [];
-  var resultNumber = 10;
-  var readPath = '/Projects/json_csv/example_json/';
-  var currentJSON;
-  var writePath = '/Projects/json_csv/example_csv/';
-
-  fs.realpath('./app', function(err, resolvedPath) {
-    if (err) throw err;
-    console.log(resolvedPath); //returns full file path
-  });
-
-  var readDirCallback = function (err, files) {
-    if (err) throw err;
-    jsonFiles = files;
-    jsonFiles.forEach(readConvertWrite);
-  };
-
-  function readConvertWrite(element, index, array) {
-    jsonData = JSON.parse(fs.readFileSync(process.env.HOME + readPath + element, 'utf8')).Response.Result;
-    jsonData.length = resultNumber;
-    element = element.slice(0,-5);
-    converter.json2csv(jsonData, function(err, csv) {
-      if (err) throw err;
-      fs.writeFileSync(process.env.HOME + writePath + element + '.csv', csv);
-    });
-
-  };
-
-  fs.readdir(process.env.HOME + readPath, readDirCallback);
-
-</script>
-
+<br>
+<button id="startConversionButton">Start Converting</button>
+<script src="js/main.js"></script>
 </body>
 </html>
