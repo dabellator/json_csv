@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-//var gui = require('nw.gui');
+var gui = require('nw.gui');
 var converter = require('json-2-csv');
 var $jsonFolder = $("#jsonFolder");
 var $csvFolder = $("#csvFolder");
@@ -11,6 +11,10 @@ var jsonData = [];
 var resultNumber = 10;
 var readPath;
 var writePath;
+
+gui.Window.get().on('close', function() {
+  this.close(true);
+});
 
 function isJson(file) {
   return path.extname(file) == '.json';
