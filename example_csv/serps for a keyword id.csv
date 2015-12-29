@@ -1,0 +1,11 @@
+ResultType,Rank,BaseRank,Url
+shopping,1,,www.google.com/
+regular,2,1,www.rei.com/c/backpacking-tents
+regular,3,2,www.amazon.com/s?rh=n%3A2204486011%2Cp_n_size_browse-bin%3A2204489011
+regular,4,3,www.walmart.com/tp/1-2-person-tents
+regular,5,4,www.target.com/c/tents-camping-outdoors-sports/-/N-5xt5u
+regular,6,5,www.dickssportinggoods.com/products/camping-family-tents.jsp
+regular,7,6,www.backpacker.com/gear/tents/2-person/
+images,8,,www.google.com/
+regular,9,7,www.cabelas.com/category/View-All-Tents/105517980.uts
+regular,10,8,www.coleman.com/Products/11000/tents

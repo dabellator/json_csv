@@ -38,10 +38,11 @@
 
   function readConvertWrite(element, index, array) {
     jsonData = JSON.parse(fs.readFileSync(process.env.HOME + readPath + element, 'utf8')).Response.Result;
-
+    jsonData.length = resultNumber;
+    element = element.slice(0,-5);
     converter.json2csv(jsonData, function(err, csv) {
       if (err) throw err;
-      fs.writeFileSync(process.env.HOME + writePath + index + '.csv', csv);
+      fs.writeFileSync(process.env.HOME + writePath + element + '.csv', csv);
     });
 
   };
