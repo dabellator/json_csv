@@ -1,4 +1,4 @@
-# json_csv
+# JSON to CSV Conversion
 Convert consecutive JSON files into CSV format
 
 ##Primary functionality & features
