@@ -2,9 +2,16 @@
   "name": "json_csv",
   "version": "0.1.0",
   "description": "convert many JSON files into CSV format",
-  "main": "index.js",
+  "main": "app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw"
+  },
+  "window": {
+    "title": "JSON to CSV Formatter",
+    "toolbar": false,
+    "width": 800,
+    "height": 500
   },
   "repository": {
     "type": "git",
