@@ -1,0 +1,51 @@
+#jsonFolder {
+  margin-left: 14em;
+  color: blue;
+}
+
+#jsonFolder:hover {
+  cursor: pointer;
+}
+
+#csvFolder {
+  margin-left: 14em;
+  color: green;
+}
+
+#csvFolder:hover {
+  cursor: pointer;
+}
+
+#jsonHeading {
+  color: blue;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#csvHeading {
+  color: green;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#beginConversionButton {
+  margin-left: 15em;
+  font-weight: bold;
+  display: inline;
+  margin-top: 5em;
+  text-align: center;
+  padding: 20px;
+}
+
+#beginConversionButton:hover {
+  cursor: pointer;
+  background-color: #003f88;
+  color: white;
+  border-radius: 5%;
+}
+
+div {
+  text-align: center;
+  display: inline;
+  margin: auto;
+}

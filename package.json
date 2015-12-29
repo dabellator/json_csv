@@ -10,8 +10,11 @@
   "window": {
     "title": "JSON to CSV Formatter",
     "toolbar": true,
-    "width": 800,
-    "height": 500
+    "fullscreen": false,
+    "resizeable": false,
+    "width": 500,
+    "height": 300,
+    "focus": true
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,6 @@
   },
   "homepage": "https://github.com/patci/json_csv#readme",
   "dependencies": {
-    "json-2-csv": "^2.0.12",
-    "json2csv": "^3.0.1"
+    "json-2-csv": "^2.0.12"
   }
 }

@@ -1,13 +1,20 @@
 <!doctype html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="main.css">
   <script src="../lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-<input style="color:blue;" id="jsonFolder" type="file" multiple nwdirectory/>
-<input style="color:green;" id="csvFolder" type="file" nwsaveas nwdirectory />
+<div>
+  <h3 id="jsonHeading">JSON Directory</h3>
+  <input id="jsonFolder" type="file" multiple nwdirectory/>
+</div>
+<div>
+  <h3 id="csvHeading">CSV Directory</h3>
+<input id="csvFolder" type="file" nwsaveas nwdirectory />
+</div>
 <br>
-<button id="startConversionButton">Start Converting</button>
+<button id="beginConversionButton">Begin Conversion</button>
 <script src="js/main.js"></script>
 </body>
 </html>
