@@ -24,18 +24,11 @@
   var readPath = '/Projects/json_csv/example_json/';
   var currentJSON;
   var writePath = '/Projects/json_csv/example_csv/';
-  var writeCount = 0;
 
   fs.realpath('./app', function(err, resolvedPath) {
     if (err) throw err;
     console.log(resolvedPath); //returns full file path
   });
-
-  var json2csvCallback = function (err, csv) {
-    if (err) throw err;
-    console.log(csv);
-    fs.writeFileSync(process.env.HOME + writePath + currentJSON + '.csv', csv);
-  };
 
   var readDirCallback = function (err, files) {
     if (err) throw err;
@@ -43,59 +36,17 @@
     jsonFiles.forEach(readConvertWrite);
   };
 
-    /*for(i = 0; i < jsonFiles.length; i++) {
-      fs.readFile(process.env.HOME + readPath + jsonFiles[i], 'utf8', function(err, currentJSON) {
-        JSON.parse(currentJSON);
-        jsonData = currentJSON.Response.Result;
-        writeCount++;
-        console.log(writeCount);
-        converter.json2csv(jsonData, json2csvCallback);
-      });
-
-    };
-    */
-
-  fs.readdir(process.env.HOME + readPath, readDirCallback);
-
   function readConvertWrite(element, index, array) {
     jsonData = JSON.parse(fs.readFileSync(process.env.HOME + readPath + element, 'utf8')).Response.Result;
 
     converter.json2csv(jsonData, function(err, csv) {
       if (err) throw err;
-      currentJSON = csv;
-      console.log(csv);
       fs.writeFileSync(process.env.HOME + writePath + index + '.csv', csv);
     });
 
   };
 
-
-
-  /* for(i = 0; i < resultNumber; i ++) {
-    jsonArray.push(currentJSON.Response.Result[i]);
-  };
-
-  converter.json2csv(jsonArray, json2csvCallback);
-  */
-
-
-/* old way
-  var fields = ["ResultType", "Rank", "BaseRank", "Url"];
-  var fieldNames = ["Type", " Rank", " Base Rank", " URL"];
-  var opts = {
-    data: json,
-    fields: fields,
-    fieldNames: fieldNames,
-    quotes: ''
-  };
-
-  json2csv(opts, function(err, csv) {
-    if (err) console.log(err);
-    console.log(csv);
-  });
-*/
-
-
+  fs.readdir(process.env.HOME + readPath, readDirCallback);
 
 </script>
 
