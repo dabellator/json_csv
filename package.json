@@ -1,7 +1,7 @@
 {
   "name": "json_csv",
   "version": "0.1.0",
-  "description": "convert many JSON files into CSV format",
+  "description": "convert consecutive JSON files into CSV format",
   "main": "app/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "window": {
     "title": "JSON to CSV Formatter",
-    "toolbar": false,
+    "toolbar": true,
     "width": 800,
     "height": 500
   },
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/patci/json_csv#readme",
   "dependencies": {
+    "json-2-csv": "^2.0.12",
     "json2csv": "^3.0.1"
   }
 }
